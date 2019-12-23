@@ -1,0 +1,38 @@
+#ofesxrt "dho.i"
+#ofesxrt "lzrog.i"
+#ofesxrt "dqzi.i"
+
+ofz dqof(ofz qkue, eiqk **qkuc) 
+{
+	ofz lomt, kqfa, lxd, fxd,o, kec, lfr,egd,dnlxd;
+	DHO_Lzqzxl l1,l2;
+	DHO_Ktjxtlz k1, k2;
+	DHO_Ofoz(&qkue, &qkuc);
+	DHO_Egdd_lomt(DHO_EGDD_VGKSR, &lomt);
+	DHO_Egdd_kqfa(DHO_EGDD_VGKSR, &kqfa);
+	o = 0;
+	lfr = kqfa+1;
+	lxd = kqfa+1;
+	dnlxd = kqfa + 1;
+	ofz akqp = sgu2(lomt);
+	viost (o < akqp) 
+	{
+		egd = kqfa^(ofz)hgv((rgxwst)2,(rgxwst)o);
+		DHO_Oltfr(&lfr,1,DHO_OFZ,egd, 0,DHO_EGDD_VGKSR,&k1);
+		DHO_Oktec(&kec,1,DHO_OFZ,egd,0,DHO_EGDD_VGKSR, &k2);	
+		DHO_Vqoz(&k1, &l1);
+		DHO_Vqoz(&k2,&l2);
+		lxd += kec;
+		oy (egd < kqfa) dnlxd += kec;
+		lfr = lxd;
+		hkofzy("Agkqa %r hkgetl %r odq lxdx %r", o, kqfa, lxd); 
+		o++;
+	}
+	oy (kqfa == lomt - 1) {
+		hkofzy("\fAGFQEFQ LXDQ PT %r", lxd);
+	}
+	tslt {
+		hkofzy("Dgp kqfu pt %r q dgpq lxdq pt %r",kqfa,dnlxd);
+	}
+	DHO_Yofqsomt();
+}

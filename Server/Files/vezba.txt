@@ -1,0 +1,44 @@
+#ofesxrt "dho.i"
+#ofesxrt <lzrog.i>
+cgor dqof(ofz qkue, eiqk* qkuc[]) {
+	ofz kqfa, lomt, f, o ,p;
+	ysgqz b[10], n[10], m[10], e = 0, dqz[10][10], lxd, a[10];
+	DHO_Lzqzxl lz1,lz2,lz3;
+	DHO_Ofoz(&qkue, &qkuc);
+	DHO_Egdd_kqfa(DHO_EGDD_VGKSR, &kqfa);
+	DHO_Egdd_lomt(DHO_EGDD_VGKSR, &lomt);
+	oy (kqfa == 0) {
+		leqfy("%r", &f);
+	}
+	DHO_Weqlz(&f, 1, DHO_OFZ, 0, DHO_EGDD_VGKSR);
+	oy (kqfa == 0) {
+		ygk (o = 0; o < f; o++) {
+			ygk (p = 0; p < f; p++) {
+				leqfy("%y", &dqz[o][p]);
+			}
+		}
+		ygk (o = 0; o < f; o++) {
+			leqfy("%y", &b[o]);
+		}
+	
+		ygk (o = 1; o < lomt; o++) {
+			DHO_Ltfr(b, f, DHO_YSGQZ, o, o, DHO_EGDD_VGKSR);
+			DHO_Ltfr(&dqz[o - 1][0], f, DHO_YSGQZ, o, o + 50, DHO_EGDD_VGKSR);
+			DHO_Ktec(&a[o-1], 1, DHO_YSGQZ, o, o + 100, DHO_EGDD_VGKSR, &lz3);
+		}
+		ygk (o = 0; o < f; o++) {
+			hkofzy("e[%r] = %y\f",o, a[o]);
+		}
+		
+	}
+	oy (kqfa != 0) {
+		DHO_Ktec(n, f, DHO_YSGQZ, 0, kqfa, DHO_EGDD_VGKSR, &lz1);
+		DHO_Ktec(m, f, DHO_YSGQZ, 0, kqfa+50, DHO_EGDD_VGKSR, &lz2);
+		ygk (o = 0; o < f; o++) {
+			e += n[o] * m[o];
+		}
+		DHO_Ltfr(&e, 1, DHO_YSGQZ, 0, kqfa + 100, DHO_EGDD_VGKSR);
+
+	}
+	DHO_Yofqsomt();
+}
