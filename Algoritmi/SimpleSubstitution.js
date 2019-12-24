@@ -124,9 +124,4 @@ export default class SimpleSubstitution {
     }
 }
 
-var ss = new SimpleSubstitution();
-var text ="mihajlo VOLI da jede govna 2345678i9<>>>><>!@#$%^Y&U*I(O|'["
-var crtext = ss.crypt(text);
-console.log(crtext);
-console.log(ss.decrypt(crtext));
 

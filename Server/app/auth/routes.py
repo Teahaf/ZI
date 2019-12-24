@@ -58,14 +58,14 @@ def user_register():
         password = data_dict['password']
 
         # Create user in db.
-        User.create_user(
+        user = User.create_user(
             user=name,
             email=email,
             password=password
         )
 
         # Registration was success.
-        return {"result": True, "message": "Registration successfull."}
+        return {"result": True, "message": "Registration successfull.", "user_id": user.id}
     except Exception as exc:
         traceback.print_exc()
         return {"result": False, "message": str(exc)}

@@ -16,6 +16,7 @@ class User(UserMixin, DB.Model):
     user_password = DB.Column(DB.String(80))
     registration_date = DB.Column(DB.DateTime, default=datetime.now)
     role = DB.Column(DB.String(50), default='user')
+    max_size = DB.Column(DB.Integer)
 
     def check_password(self, password):
         """Check entered password."""
@@ -27,7 +28,8 @@ class User(UserMixin, DB.Model):
         pass_hash = BCRYPT.generate_password_hash(password).decode('utf-8')
         user = cls(user_name=user,
                    user_email=email,
-                   user_password=pass_hash)
+                   user_password=pass_hash,
+                   max_size = 15000)
         if is_admin:
             user.role = 'admin'
 

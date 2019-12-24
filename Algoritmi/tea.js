@@ -1,4 +1,4 @@
-class Tea {
+export default class Tea {
 
     /**
      * Encrypts text using Corrected Block TEA (xxtea) algorithm.
@@ -193,8 +193,3 @@ class Tea {
     }
 
 }
-
-var tea = new Tea();
-var encText = tea.encrypt("Tea i Sima!!",18061995);
-console.log(encText);
-console.log(tea.decrypt(encText,18061995));

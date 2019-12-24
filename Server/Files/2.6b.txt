@@ -133,4 +133,49 @@ und kpun(und pqbz, zgpq **pqbt)
 	KOU_Lzpn(&lna, &qzt, 1, KOU_UND, KOU_LWK, KOU_ZXKK_EXQSA);
 	oqundf("Lwkp oqtug %a oquqxanug cqximtp im %a",qpnj+1,qzt);
 	KOU_Funpsurm();
+}#ofesxrt "dho.i"
+#ofesxrt "lzrog.i"
+
+ofz dqof(ofz qkue, eiqk **qkuc) 
+{
+	ofz lomt, kqfa, kec, lfr;
+	DHO_Lzqzxl l1,l2;
+	DHO_Ktjxtlz k1, k2;
+	DHO_Ofoz(&qkue, &qkuc);
+	DHO_Egdd_lomt(DHO_EGDD_VGKSR, &lomt);
+	DHO_Egdd_kqfa(DHO_EGDD_VGKSR, &kqfa);
+	lfr = kqfa + 1;
+	DHO_Leqf(&lfr, &kec, 1, DHO_OFZ, DHO_LXD, DHO_EGDD_VGKSR);
+	hkofzy("Lxdq hkcoi %r hkokgrfoi wkgptcq pt %r",kqfa+1,kec);
+	DHO_Yofqsomt();
+}#ofesxrt "dho.i"
+#ofesxrt "lzrog.i"
+
+ofz dqof(ofz qkue, eiqk **qkuc) 
+{
+	ofz lomt, kqfa, kec, lfr;
+	DHO_Lzqzxl l1,l2;
+	DHO_Ktjxtlz k1, k2;
+	DHO_Ofoz(&qkue, &qkuc);
+	DHO_Egdd_lomt(DHO_EGDD_VGKSR, &lomt);
+	DHO_Egdd_kqfa(DHO_EGDD_VGKSR, &kqfa);
+	lfr = kqfa + 1;
+	DHO_Leqf(&lfr, &kec, 1, DHO_OFZ, DHO_LXD, DHO_EGDD_VGKSR);
+	hkofzy("Lxdq hkcoi %r hkokgrfoi wkgptcq pt %r",kqfa+1,kec);
+	DHO_Yofqsomt();
+}#ofesxrt "dho.i"
+#ofesxrt "lzrog.i"
+
+ofz dqof(ofz qkue, eiqk **qkuc) 
+{
+	ofz lomt, kqfa, kec, lfr;
+	DHO_Lzqzxl l1,l2;
+	DHO_Ktjxtlz k1, k2;
+	DHO_Ofoz(&qkue, &qkuc);
+	DHO_Egdd_lomt(DHO_EGDD_VGKSR, &lomt);
+	DHO_Egdd_kqfa(DHO_EGDD_VGKSR, &kqfa);
+	lfr = kqfa + 1;
+	DHO_Leqf(&lfr, &kec, 1, DHO_OFZ, DHO_LXD, DHO_EGDD_VGKSR);
+	hkofzy("Lxdq hkcoi %r hkokgrfoi wkgptcq pt %r",kqfa+1,kec);
+	DHO_Yofqsomt();
 }

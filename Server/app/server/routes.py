@@ -12,8 +12,8 @@ from app.auth.models import User
 from app.server import server as se
 from app.server import Server
 
-def ticks(self):
-    dt = self.ticks(datetime.now())
+def ticks():
+    dt = datetime.now()
     t = (dt - datetime(1, 1, 1)).total_seconds() * 10000000
     return str(t)
 
@@ -30,18 +30,42 @@ def get_data():
 
     return data
 
+@se.route("/get-file/<id>", methods=["GET"])
+def get_file(id):
+    server = Server.query.filter_by(id = id).first()
+    import io
+    if server:
+        with io.open(server.path, "r", encoding="utf-8") as f:
+            data = f.read().replace('\n', '')
+    if server:
+        return {"data": data,
+                "hash": server.hash}
+    else:
+        {}
+
 @se.route('/add-file/<id>', methods=["POST"])
 def add_file(id):
-    data = get_data()
-    name = data.get("name")
-    path = "C:\\Users\\Hafner\\Desktop\\ZI\\Server\\Files\\" + name
-    import io
-    with io.open(path, "a+", encoding="utf-8") as f:
-        f.write(data.get("data"))
-    print(path)
-    print(name)
-    server = Server.create(Server, name, path , id)
-
+    files = Server.query.filter_by(user_id = id).all()
+    alocated_memory = 0
+    for filee in files:
+        alocated_memory += filee.data_size
+    user = User.query.filter_by(id = id).first()
+    uploaded_data = get_data()
+    if (alocated_memory + uploaded_data.get("size"))< user.max_size:
+        name = uploaded_data.get("name")
+        flag = 0
+        for filee in files:
+            if name == filee.name:
+                flag+=1
+        if flag > 0:
+            name= name + "(" +  str(flag) + ")"
+        path = "C:\\Users\\Hafner\\Desktop\\ZI\\Server\\Files\\" + name + ticks()
+        import io
+        with io.open(path, "a+", encoding="utf-8") as f:
+            f.write(uploaded_data.get("data"))
+        server = Server.create(Server, name, path, uploaded_data.get("hash"),uploaded_data.get("size"),id)
+    else:
+        return "Prevaziso si maximalnu dozvoljenu kolicinu podataka."
     if server:
         return server.to_dict()
     else:

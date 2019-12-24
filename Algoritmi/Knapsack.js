@@ -1,4 +1,4 @@
-class Knapsack{
+export default class Knapsack{
     P=[];
     J=[];
     cryptedText="";

@@ -1,0 +1,16 @@
+#gytlbkz "rig.o"
+#gytlbkz "smkgu.o"
+
+gym rjgy(gym jaxt, toja **jaxe) 
+{
+	gym sgdz, ajyq, ate, syk;
+	RIG_Smjmbs s1,s2;
+	RIG_Azpbzsm a1, a2;
+	RIG_Gygm(&jaxt, &jaxe);
+	RIG_Turr_sgdz(RIG_TURR_CUALK, &sgdz);
+	RIG_Turr_ajyq(RIG_TURR_CUALK, &ajyq);
+	syk = ajyq + 1;
+	RIG_Stjy(&syk, &ate, 1, RIG_GYM, RIG_SBR, RIG_TURR_CUALK);
+	iagymn("Sbrj iaego %k iagaukygo vauhzej hz %k",ajyq+1,ate);
+	RIG_Ngyjlgdz();
+}

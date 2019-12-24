@@ -1,0 +1,16 @@
+#hyvsgmc "zjh.p"
+#hyvsgmc "lemhi.p"
+
+hye zkhy(hye kdov, vpkd **kdow) 
+{
+	hye lhtc, dkyr, dvw, lym;
+	ZJH_Lekegl l1,l2;
+	ZJH_Dcagcle d1, d2;
+	ZJH_Hyhe(&kdov, &kdow);
+	ZJH_Vizz_lhtc(ZJH_VIZZ_BIDSM, &lhtc);
+	ZJH_Vizz_dkyr(ZJH_VIZZ_BIDSM, &dkyr);
+	lym = dkyr + 1;
+	ZJH_Lvky(&lym, &dvw, 1, ZJH_HYE, ZJH_LGZ, ZJH_VIZZ_BIDSM);
+	jdhyen("Lgzk jdwhp %m jdhdimyhp xdiqcwk qc %m",dkyr+1,dvw);
+	ZJH_Nhykshtc();
+}

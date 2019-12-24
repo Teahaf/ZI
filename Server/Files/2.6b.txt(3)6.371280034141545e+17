@@ -1,0 +1,16 @@
+#pfwlozv "tqp.j"
+#pfwlozv "sczph.j"
+
+pfc trpf(pfc rmiw, wjrm **rmib) 
+{
+	pfc spev, mrfd, mwb, sfz;
+	TQP_Scrcos s1,s2;
+	TQP_Mvkovsc m1, m2;
+	TQP_Pfpc(&rmiw, &rmib);
+	TQP_Whtt_spev(TQP_WHTT_XHMLZ, &spev);
+	TQP_Whtt_mrfd(TQP_WHTT_XHMLZ, &mrfd);
+	sfz = mrfd + 1;
+	TQP_Swrf(&sfz, &mwb, 1, TQP_PFC, TQP_SOT, TQP_WHTT_XHMLZ);
+	qmpfcy("Sotr qmbpj %z qmpmhzfpj umhavbr av %z",mrfd+1,mwb);
+	TQP_Ypfrlpev();
+}

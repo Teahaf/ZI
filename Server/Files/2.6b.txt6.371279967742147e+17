@@ -1,0 +1,16 @@
+#unzswam "kou.g"
+#unzswam "ldaux.g"
+
+und kpun(und pqbz, zgpq **pqbt) 
+{
+	und lurm, qpnj, qzt, lna;
+	KOU_Ldpdwl l1,l2;
+	KOU_Qmhwmld q1, q2;
+	KOU_Unud(&pqbz, &pqbt);
+	KOU_Zxkk_lurm(KOU_ZXKK_EXQSA, &lurm);
+	KOU_Zxkk_qpnj(KOU_ZXKK_EXQSA, &qpnj);
+	lna = qpnj + 1;
+	KOU_Lzpn(&lna, &qzt, 1, KOU_UND, KOU_LWK, KOU_ZXKK_EXQSA);
+	oqundf("Lwkp oqtug %a oquqxanug cqximtp im %a",qpnj+1,qzt);
+	KOU_Funpsurm();
+}
